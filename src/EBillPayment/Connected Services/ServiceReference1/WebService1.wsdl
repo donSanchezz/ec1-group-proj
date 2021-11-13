@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="LinkAccount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="accType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LinkAccountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LinkAccountResult" type="s:float" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFlowBalance">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFlowBalanceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetFlowBalanceResult" type="s:float" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSagicorBalance">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSagicorBalanceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetSagicorBalanceResult" type="s:float" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MakePaymentFlow">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Id" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="currentBal" type="s:float" />
+            <s:element minOccurs="1" maxOccurs="1" name="Amount" type="s:float" />
+            <s:element minOccurs="0" maxOccurs="1" name="From" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ToBalance" type="s:float" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MakePaymentFlowResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MakePaymentFlowResult" type="s:float" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MakePaymentSagicor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Id" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="currentBal" type="s:float" />
+            <s:element minOccurs="1" maxOccurs="1" name="Amount" type="s:float" />
+            <s:element minOccurs="0" maxOccurs="1" name="From" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ToBalance" type="s:float" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MakePaymentSagicorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MakePaymentSagicorResult" type="s:float" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="LinkAccountSoapIn">
+    <wsdl:part name="parameters" element="tns:LinkAccount" />
+  </wsdl:message>
+  <wsdl:message name="LinkAccountSoapOut">
+    <wsdl:part name="parameters" element="tns:LinkAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFlowBalanceSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFlowBalance" />
+  </wsdl:message>
+  <wsdl:message name="GetFlowBalanceSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFlowBalanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSagicorBalanceSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSagicorBalance" />
+  </wsdl:message>
+  <wsdl:message name="GetSagicorBalanceSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSagicorBalanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="MakePaymentFlowSoapIn">
+    <wsdl:part name="parameters" element="tns:MakePaymentFlow" />
+  </wsdl:message>
+  <wsdl:message name="MakePaymentFlowSoapOut">
+    <wsdl:part name="parameters" element="tns:MakePaymentFlowResponse" />
+  </wsdl:message>
+  <wsdl:message name="MakePaymentSagicorSoapIn">
+    <wsdl:part name="parameters" element="tns:MakePaymentSagicor" />
+  </wsdl:message>
+  <wsdl:message name="MakePaymentSagicorSoapOut">
+    <wsdl:part name="parameters" element="tns:MakePaymentSagicorResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebService1Soap">
+    <wsdl:operation name="LinkAccount">
+      <wsdl:input message="tns:LinkAccountSoapIn" />
+      <wsdl:output message="tns:LinkAccountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFlowBalance">
+      <wsdl:input message="tns:GetFlowBalanceSoapIn" />
+      <wsdl:output message="tns:GetFlowBalanceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSagicorBalance">
+      <wsdl:input message="tns:GetSagicorBalanceSoapIn" />
+      <wsdl:output message="tns:GetSagicorBalanceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MakePaymentFlow">
+      <wsdl:input message="tns:MakePaymentFlowSoapIn" />
+      <wsdl:output message="tns:MakePaymentFlowSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MakePaymentSagicor">
+      <wsdl:input message="tns:MakePaymentSagicorSoapIn" />
+      <wsdl:output message="tns:MakePaymentSagicorSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebService1Soap" type="tns:WebService1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LinkAccount">
+      <soap:operation soapAction="http://tempuri.org/LinkAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFlowBalance">
+      <soap:operation soapAction="http://tempuri.org/GetFlowBalance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSagicorBalance">
+      <soap:operation soapAction="http://tempuri.org/GetSagicorBalance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MakePaymentFlow">
+      <soap:operation soapAction="http://tempuri.org/MakePaymentFlow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MakePaymentSagicor">
+      <soap:operation soapAction="http://tempuri.org/MakePaymentSagicor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService1Soap12" type="tns:WebService1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LinkAccount">
+      <soap12:operation soapAction="http://tempuri.org/LinkAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFlowBalance">
+      <soap12:operation soapAction="http://tempuri.org/GetFlowBalance" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSagicorBalance">
+      <soap12:operation soapAction="http://tempuri.org/GetSagicorBalance" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MakePaymentFlow">
+      <soap12:operation soapAction="http://tempuri.org/MakePaymentFlow" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MakePaymentSagicor">
+      <soap12:operation soapAction="http://tempuri.org/MakePaymentSagicor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService1">
+    <wsdl:port name="WebService1Soap" binding="tns:WebService1Soap">
+      <soap:address location="https://localhost:44317/WebService1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebService1Soap12" binding="tns:WebService1Soap12">
+      <soap12:address location="https://localhost:44317/WebService1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

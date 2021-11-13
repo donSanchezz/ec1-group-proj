@@ -1,0 +1,15 @@
+﻿.background-image {
+    background-image: url(/imgs/blob-background.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.login-blob {
+    background-image: url(/imgs/login-blob.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+
