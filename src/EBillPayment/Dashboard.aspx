@@ -20,7 +20,7 @@
 
                     <div class="card-body">
                         <div class="d-flex flex-row align-items-center">
-                            <asp:Label ID="SavingsAcc" runat="server" Text="NOT LINKED" Font-Size="X-Large"></asp:Label>
+                            <asp:Label ID="SavingsAcc" runat="server" Text="0" Font-Size="X-Large"></asp:Label>
                         </div>
                     </div>
                 </div>
@@ -35,7 +35,7 @@
 
                     <div class="card-body">
                         <div class="d-flex flex-row align-items-center">
-                         <asp:Label ID="ChequingAcc" runat="server" Text="NOT LINKED" Font-Size="X-Large"></asp:Label>
+                         <asp:Label ID="ChequingAcc" runat="server" Text="0" Font-Size="X-Large"></asp:Label>
                         </div>
                     </div>
                 </div>

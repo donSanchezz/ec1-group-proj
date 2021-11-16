@@ -180,6 +180,6 @@ C:\Users\Sanchez\Documents\GitHub\ec1-group-proj\src\EBillPayment\bin\Microsoft.
 C:\Users\Sanchez\Documents\GitHub\ec1-group-proj\src\EBillPayment\bin\Newtonsoft.Json.xml
 C:\Users\Sanchez\Documents\GitHub\ec1-group-proj\src\EBillPayment\bin\System.Web.Optimization.xml
 C:\Users\Sanchez\Documents\GitHub\ec1-group-proj\src\EBillPayment\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Sanchez\Documents\GitHub\ec1-group-proj\src\EBillPayment\obj\Debug\EBillPayment.csproj.CopyComplete
 C:\Users\Sanchez\Documents\GitHub\ec1-group-proj\src\EBillPayment\obj\Debug\EBillPayment.dll
 C:\Users\Sanchez\Documents\GitHub\ec1-group-proj\src\EBillPayment\obj\Debug\EBillPayment.pdb
+C:\Users\Sanchez\Documents\GitHub\ec1-group-proj\src\EBillPayment\obj\Debug\EBillPayment.csproj.AssemblyReference.cache
